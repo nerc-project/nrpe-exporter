@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- nrpe-exporter-allow-auth-clusterrole.yaml
+- nrpe-exporter-allow-auth-clusterrolebinding.yaml
+- prometheus-k8s-rolebinding.yaml
+- prometheus-k8s-role.yaml
+- nrpe-metrics-reader-clusterrole.yaml
+- nrpe-metrics-reader-clusterrolebinding.yaml
+- nrpe-exporter-allow-privileged-rolebinding.yaml
+- nrpe-exporter-allow-privileged-role.yaml

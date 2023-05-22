@@ -5,7 +5,15 @@ commonLabels:
   app: nrpe-exporter
 
 resources:
+  - certificate.yaml
+  - daemonset.yaml
   - namespace.yaml
+  - secret.yaml
+  - serviceaccount.yaml
+  - servicemonitor.yaml
+  - service.yaml
+  - internal-ca
+  - rbac
 
 configurations:
   - transformers/commonLabels.yaml
