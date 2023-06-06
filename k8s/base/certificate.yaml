@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: nrpe-exporter-cert
+spec:
+  isCA: true
+  commonName: nrpe-exporter
+  dnsNames:
+    - nrpe-exporter
+    - nrpe-exporter.nrpe-exporter.svc
+    - nrpe-exporter.nrpe-exporter.svc.cluster.local
+  secretName: nrpe-exporter-cert
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: internal-ca
+    kind: Issuer
